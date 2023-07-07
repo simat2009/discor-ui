@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Discord | Místo, kde můžeš pokecat a trávit čas.</title>
+    <link rel="icon" href="discord_new_20218785_removebg_preview_dqn_icon.ico">
+    <link href="https://fonts.cdnfonts.com/css/gg-sans-2" rel="stylesheet">
+</head>
+<style>
+
+    @import url('https://fonts.cdnfonts.com/css/gg-sans-2');
+
+
+    body{
+        background-color: rgb(58, 58, 58);
+        margin: 0;
+        padding: 0;
+        font-family: 'gg sans', sans-serif;
+        cursor: pointer;
+    }
+    .screen-flex{
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .panel{
+        display: flex;
+        background-color: rgb(30,33,36);
+        align-self: flex-start;
+        height: 100vh;
+        width: 120px;
+        gap: 10px;
+        flex-direction: column;
+        align-content: center;
+    }
+    .panel2{
+        display: flex;
+        background-color: rgb(40, 43, 48);
+        height: 100vh;
+        width: 220px;
+        gap: 10px;
+        align-self: flex-start;
+        flex-direction: column;
+    }
+    .panel3{
+        display: flex;
+        background-image: url(Snímek\ obrazovky\ \(8\).png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        justify-self: end;
+    }
+    .top-pole{
+        display: flex;
+        align-self: flex-start;
+        justify-self: flex-start;
+        width: 101%;
+        height: 53px;
+        box-shadow: 1px 1px 1px #000000;
+        transition: 0.3s;
+    }
+    .text2{
+        align-self: center;
+        font-size: 20px;
+        color: rgb(155, 154, 154);
+        margin-left: 10px;
+    }
+    .text3{
+        align-self: center;
+        font-size: 20px;
+        color: rgb(155, 154, 154);
+        margin-left: 90px;
+        padding-left: 10px;
+
+    }
+    .text3:hover{
+        color: white;
+    }
+    .down-pole{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        color: rgb(155, 154, 154);
+        font-size: 15px;
+    }
+    .bottom-text{
+        margin-left: 10px;
+    }
+    .fa-angle-down{
+        margin-right: 10px;
+    }
+    .fa-magnifying-glass{
+       margin-left: 10px;
+    }
+    .bottom-text:hover{
+        color: white;
+        height: 5px;
+    }
+    .panel-top{
+        display: flex;
+        box-shadow: 1px 1px 1px #000000;
+        width: 100%;
+        height: 50px;
+        align-self: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        white-space: nowrap ;
+    }
+    .text-panel-top{
+        color: rgb(155, 154, 154);
+        font-size: 20px;
+        align-self: center;
+        margin-left: 20px;
+        transition: 0.3s;
+    }
+    .text-panel-top2{
+        color: rgb(155, 154, 154);
+        font-size: 20px;
+        align-self: center;
+        justify-content: flex-end;
+        margin-right: 20px;
+        transition: 0.3s;
+    }
+    .top{
+        margin-right: 10px;
+        transition: 0.3s;
+    }
+    .text-panel-top:hover{
+        color: white;
+        transform: scale(1.02);
+    }
+    .top1:hover{
+        color: white;
+        transform: scale(1.02);
+    }
+    .top2:hover{
+        color: white;
+        transform: scale(1.02);
+    }
+    .top3:hover{
+        color: white;
+        transform: scale(1.02);
+    }
+    .user{
+        display: flex;
+        background-color: gray;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 0.2s;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-discord{
+        display: flex;
+        background-color: gray;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 0.2s;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-download{
+        display: flex;
+        background-color: gray;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 0.2s;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-download:hover{
+        background-color: white;
+        transform: scale(1.00);
+        border-radius: 30%;
+    }
+    .user1{
+        display: flex;
+        background-image: url(Webp.net-resizeimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 0.2s;
+        justify-content: center;
+        align-items: center;
+    }
+    .user2{
+        display: flex;
+        background-image: url(Webp.net-resizeimage\ \(1\).jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: gray;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 0.2s;
+        justify-content: center;
+        align-items: center;
+    }
+    .user3{
+        display: flex;
+        background-image: url(Webp.net-resizeimage\ \(2\).jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: gray;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+        margin-top: 10px;
+        transition: 0.2s;
+        justify-content: center;
+        align-items: center;
+    }
+
+    hr{
+        width: 30px;
+        border-radius: 30%;
+    }
+    
+    .fa-discord{
+        font-size: 30px;
+        color: whitesmoke;
+        text-shadow: 5px 5px 10px rgb(85, 85, 85);
+    }
+    .fa-plus{
+        font-size: 45px;
+        color:rgb(78, 230, 78);
+        text-shadow: 5px 5px 10px rgb(85, 85, 85);
+    }
+    .fa-compass{
+        font-size: 25px;
+        color:rgb(78, 230, 78);
+        text-shadow: 5px 5px 10px rgb(85, 85, 85);
+    }
+    .fa-download{
+        font-size: 25px;
+        color:rgb(78, 230, 78);
+        text-shadow: 5px 5px 10px rgb(85, 85, 85);
+    }
+    .user:hover{
+        background-color: rgb(255, 255, 255);
+        transform: scale(1.00);
+        border-radius: 30%;
+    }
+    .user-discord:hover{
+        background-color: rgb(114, 137, 218);
+        transform: scale(1.00);
+        border-radius: 30%;
+    }
+    .user1:hover{
+        background-color: rgb(114, 137, 218);
+        transform: scale(1.05);
+        border-radius: 30%;
+    }
+    .user2:hover{
+        background-color: rgb(114, 137, 218);
+        transform: scale(1.05);
+        border-radius: 30%;
+    }
+    .user3:hover{
+        background-color: rgb(114, 137, 218);
+        transform: scale(1.05);
+        border-radius: 30%;
+    }
+    @media only screen and (max-width: 1250px){
+        .panel3 {
+            background-image: none;
+            background-color: rgb(49,51,56);
+        }
+        .panel{
+            width: 140px;
+        }
+    }
+    @media only screen and (max-width: 1250px){
+        .panel{
+            width: 160px;
+        }
+    }
+</style>
+<body class="body">
+
+    <div class="screen-flex">
+        <div class="panel">
+            <div class="user-discord" onclick="myFunction4()">
+                <i class="fa-brands fa-discord"></i>
+            </div>
+            <hr>
+            <div class="user1" onclick="myFunction()"></div>
+            <div class="user2" onclick="myFunction2()"></div>
+            <div class="user3" onclick="myFunction3()"></div>
+            <div class="user">
+                <a href="file:///C:/Users/Simon/Desktop/web/discord/discord.html" target="_blank">
+                    <i class="fa-regular fa-plus"></i>
+                </a>
+            </div>
+            <div class="user">
+                <a href="https://discord.com" target="_blank">
+                    <i class="fa-solid fa-compass"></i>
+                </a>
+            </div>
+            <hr>
+            <a href="https://drive.google.com/uc?export=download&id=1KyfdU--UUG-fNHjpQ6sTDF_MDhvB_OBp">
+                <div class="user-download">
+                    <i class="fa-solid fa-download"></i>
+                </div>
+            </a>
+        </div>
+        <div class="panel2">
+            <div class="top-pole">
+                <span class="text2">Hafíkov</span>
+                <span class="text3"><i class="fa-solid fa-angle-down"></i></span>
+                <div class="top-pole-bg"></div>
+            </div>
+            <div class="down-pole">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span><span class="bottom-text"> Procházet</span>
+            </div>
+            
+        </div>
+        <div class="panel3">
+            <div class="panel-top">
+                <span class="text-panel-top"><i class="fa-solid fa-users"></i>
+                    <a id="demo"> Přátelé</a>
+                </span>
+                <span class="text-panel-top2">
+                    <i class="fa-solid fa-message top top1"></i>
+                    <i class="fa-solid fa-inbox top top2"></i>
+                    <i class="fa-solid fa-circle-question top top3"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = " Hafík1";
+        }
+        function myFunction2() {
+            document.getElementById("demo").innerHTML = " Hafík2";
+        }
+        function myFunction3() {
+            document.getElementById("demo").innerHTML = " Hafík3";
+        }
+        function myFunction4() {
+            document.getElementById("demo").style.color = "blue";
+        }   
+        function myFunction4() {
+            document.getElementById("demo").innerHTML = " Přátelé";
+        }
+    </script>
+</body>
+</html>
